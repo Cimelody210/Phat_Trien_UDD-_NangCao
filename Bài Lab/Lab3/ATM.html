@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab3 - atm</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: grid;
+        height: 100%;
+        width: 100%;
+        place-items: center;
+        background: rgb(250, 243, 243);
+        
+    }
+    .login{
+        margin: 5px;
+    }
+    .login > form#formdangnhap label{
+        font-size: 20px;
+        color: orchid;
+        padding: 5px;
+    }
+    input{
+        width: 200px;
+        height: 30px;
+        margin-top: 15px;
+        padding: 6px;
+    }
+    h3{
+        color: red;
+        text-align: center;
+        font-size: 24px;
+    }
+    .login .btn_login{
+        width: 60px;
+        height: 30px;
+    }
+
+    
+</style>
+<body>
+    <div class="login">
+        <h3>Form dang nhap</h3>
+        <form action=""id = "formdangnhap">
+            <label for="">Nhap email: </label>
+            <input type="text" name="" id="email" placeholder="Nhap ten"><br>
+            <i class="fa-solid fa-user"></i>
+            <label for="">Nhap mat khau: </label>
+            <input type="password" name="" id="password" placeholder="Nhap mat khau tai day">
+            <span id="emailError"></span>
+            <span id="passwordError"></span>
+        </form>
+        <br><br><br>
+        <button class="btn_login">Login</button>
+    </div>
+    <script>
+        // script.js
+        document.getElementById('formdangnhap').addEventListener('submit', function(event) {
+            console.log("suyushrgwe");
+            event.preventDefault();
+            
+            // Clear previous errors
+            document.getElementById('emailError').textContent = '';
+            document.getElementById('passwordError').textContent = '';
+            
+            // Get values
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            let valid = true;
+
+            function containsAtSymbol(email) {
+                return email.includes('@') && email.indexOf('@') > 0 && email.lastIndexOf('@') < email.length - 1;
+            }
+            function isValidEmailFormat(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+
+            function displayUserInfo(email) {
+
+                const messageContainer = document.createElement('div');
+                messageContainer.className = 'success-message';
+                messageContainer.textContent = `Login successful! Welcome, ${email}`;
+
+                // Append the message to the body or any other container
+                document.body.appendChild(messageContainer);
+
+                // Optionally, you could also remove the form
+                document.getElementById('loginForm').style.display = 'none';
+            }
+            if (!containsAtSymbol(email)) {
+                document.getElementById('emailError').textContent = 'Email phải chứa ký tự "@" ';
+                valid = false;
+            } else if (!isValidEmailFormat(email)) {
+                document.getElementById('emailError').textContent = 'Định dạng email sai';
+                valid = false;
+            }
+            // Check password chứa ít nhất 8 ký tự
+            if (password.length >= 8) {
+                document.getElementById('passwordError').textContent = 'Định dạng email đúng';
+                valid = false;
+            }
+
+            if (valid) {
+                displayUserInfo(email);
+            }
+        });
+
+
+        
+
+        // const email = document.getElementById('email');
+        // const password  = document.getElementById('password');
+
+        // const popup =  getElementById('popup');
+
+        // function user(email, password){
+        //     this.email = email;
+        //     this.password = password;
+        // }
+        // var user1 = new user("nguyentin2397@gmail.com", '12345');
+
+        // console.log("Lab 2");
+        // // Đóng pop-up khi nhấn ra ngoài pop-up
+        // window.addEventListener('click', function(event) {
+        //     if (event.target === popup) {
+        //         popup.style.display = 'none';
+        //     }
+        // });
+    </script>
+</body>
+</html>
