@@ -6,43 +6,59 @@
     <title>Lab3 - atm</title>
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
     *{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: "SUSE", sans-serif;
     }
     body{
         display: grid;
         height: 100%;
         width: 100%;
+        font-size: 30px;
         place-items: center;
-        background: rgb(250, 243, 243);
+        /* background-image: url(https://cdn.oneesports.vn/cdn-data/sites/4/2021/08/Wallpaper1-1024x512.jpg); */
+        background: hsl(0, 10%, 35%);
         
     }
     .login{
-        margin: 5px;
+        overflow: hidden;
+        margin-top: 50px;
+        padding: 30px;
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+        background-color: white;
     }
     .login > form#formdangnhap label{
-        font-size: 20px;
+        font-size: 23px;
         color: orchid;
         padding: 5px;
     }
     input{
-        width: 200px;
+        width: 250px;
         height: 30px;
+        background-color: #d2ffff;
         margin-top: 15px;
         padding: 6px;
+        font-size: 17px;
+    }
+    input#email{
+        margin-left: 40px;
     }
     h3{
         color: red;
         text-align: center;
-        font-size: 24px;
+        font-size: 23px;
     }
     .login .btn_login{
         width: 60px;
         height: 30px;
+        font-size: 20px;
+        background-color: bisque;
+        
     }
-
+    
     
 </style>
 <body>
@@ -60,6 +76,8 @@
         <br><br><br>
         <button class="btn_login">Login</button>
     </div>
+    <div id="loginMessage"></div>
+    <div id="errorMessage"></div>
     <script>
         // script.js
         document.getElementById('formdangnhap').addEventListener('submit', function(event) {
@@ -73,6 +91,7 @@
             // Get values
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
+            
             let valid = true;
 
             function containsAtSymbol(email) {
@@ -104,13 +123,33 @@
             }
             // Check password chứa ít nhất 8 ký tự
             if (password.length >= 8) {
-                document.getElementById('passwordError').textContent = 'Định dạng email đúng';
+                document.getElementById('passwordError').textContent = 'Định dạng mật khẩu đúng';
                 valid = false;
             }
-
-            if (valid) {
-                displayUserInfo(email);
+            async function CheckLogin(){
+                try {
+                    const respone =  await fetch('/ATM', {
+                        method: 'POST',
+                        headers:{   
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ username, password }),
+    
+                    });
+                    if(respone.ok){
+                        const data = await response.json();
+                        loginMessage.textContent = `Chào mừng ${data.username}! Bạn đã đăng nhập thành công.`;
+                    }
+                    else{
+                        const errordata = await response.json();
+                        loginMessage.textContent = `Chào mừng ${data.username}! Bạn đăng nhập thất bại`;
+                        
+                    }
+                } catch (error) {
+                    
+                }
             }
+            document.getElementById('loginForm').addEventListener('submit', handleLogin);
         });
 
 
