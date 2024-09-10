@@ -24,19 +24,25 @@
         
     }
     .login{
+        border-radius: 15px;
         overflow: hidden;
         margin-top: 50px;
         padding: 30px;
         box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
         background-color: white;
     }
+    .login > form#formdangnhap{
+      margin-bottom: -10px;
+    }
     .login > form#formdangnhap label{
-        font-size: 20px;
-        color: orchid;
-        padding: 5px;
+        font-size: 18px;
+        color: brown;
+        font-weight: bold;
+        padding: 15px;
+        
     }
     input{
-        width: 250px;
+        width: 300px;
         height: 30px;
         background-color: #d2ffff;
         margin-top: 15px;
@@ -44,29 +50,44 @@
         font-size: 17px;
     }
     input#email{
-        margin-left: 37px;
+        margin-left: 31px;
     }
     h3{
         color: red;
         text-align: center;
         font-size: 30px;
     }
-    .login button.btn_login{
-        width: 110px;
-        margin: 5px 150px;
-        padding: 2px;
+    .login .btn_login{
+        width: 200px;
+        margin: 15px 150px;
         border-radius: 5px;
         height: 30px;
         font-size: 20px;
-        background-color: bisque;
+        font-weight: bold;
+        background-color: orange;
         
+    }
+    .login > .mxh{
+      display: flex;
+      flex-direction: row;
+      padding: 30px 100px 0 100px;
+      gap: 40px;
+      margin: 0 50px;
+      align-content: space-between;
+      font-size: 16px;
+      
+    }
+    .login > .mxh > img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
     }
     
     
 </style>
 <body>
     <div class="login">
-        <h3>Form dang nhap</h3>
+        <h3>Login</h3>
         <form action=""id = "formdangnhap">
             <label for="">Nhap email: </label>
             <input type="text" name="" id="email" placeholder="Nhap ten"><br>
@@ -78,6 +99,11 @@
         </form>
         <br><br><br>
         <button class="btn_login">Login</button>
+        <div class="mxh">
+          <img src="https://taphoammo.net/img/fb-viet-new-co-nguoi-dung-that-1000-5000-ban-be_77825.png">
+          <img src="https://storage.googleapis.com/support-kms-prod/ZAl1gIwyUsvfwxoW9ns47iJFioHXODBbIkrK">
+          <img src="https://cdn.tgdd.vn/2020/04/GameApp/twitter-logo-200x200.png">
+        </div>
     </div>
     <div id="loginMessage"></div>
     <div id="errorMessage"></div>
