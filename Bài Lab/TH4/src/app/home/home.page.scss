@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+  --font-family: "Montserrat", sans-serif;
+
+}
+#container {
+  --color: blanchedalmond;
+  strong{
+    --color: blanchedalmond;
+  }
+}
+.title{
+  --color: rgb(167, 21, 135);
+  --font-size: 30px;
+  --text-align: center;
+
+}
+#demo{
+  --font-size: 30px;
+  h5{
+    --color: rgb(167, 21, 135);
+    --font-weight: 400;
+  }
+}
+.inp_NhapTien{
+  width: 260px;
+  height: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  
+}
+.btn{
+  --background: orange;
+  --width: 160px;
+  --height: 20px;
+  --text-align: center;
+}
+.btn_GuiTien{
+  --background: rgb(157, 246, 25);
+}
+.btn_RutTien{
+  --background: rgb(239, 23, 95);
+}
+#container a {
+  --text-decoration: none;
+}

@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="title">Hệ thống ATM</ion-title>
+  </ion-toolbar>
+  <div id="demo">
+    <h5>App rút tiền bruh nhất quả đất</h5>
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-toolbar>
+    <ion-title>Thông tin dev</ion-title>
+  </ion-toolbar>
+  <div id="container">
+    <strong>Chào mừng bạn đến với app này</strong>
+    <p></p>
+  </div>
+</ion-content>
+
+<ion-content [fullscreen]="true">
+  <ion-toolbar>
+    <h5>Danh sach tai khoan</h5>
+    <ion-item>
+      <p>Welcome to App:</p>
+    </ion-item>
+    <ion-button class ="btn" (click) = "navigateDetail()">Go to list</ion-button>
+  </ion-toolbar>
+</ion-content>
+
+<ion-content>
+  <ion-item>
+    <label>Nhap so tien muon rut hoac gui:</label>
+    <ion-input class = "inp_NhapTien" type="number" placeholder="Nhap so tien o day (phai lon hon 0)"></ion-input>
+
+    <ion-button class="btn btn_RutTien">Rut tien</ion-button>
+    <ion-button class=" btn btn_GuiTien">Gui tien</ion-button>
+  </ion-item>
+</ion-content>
