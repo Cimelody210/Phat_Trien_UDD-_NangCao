@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body{
+  position: absolute;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  padding: 0;
+}
+form#form{
+  width: 80%;
+  margin: 50px 50px 0 50px;
+  position: relative;
+  background-color: #cbd8f7;
+  transform: translate(60px 20px);
+  border: 2px solid rgb(241, 197, 197);
+  border-radius: 6px;
+  box-shadow:black;
+}
+form#form .inp{
+  border: 1px solid red;
+  width: 260px;
+  height: 30px;
+  border-radius: 6px;
+  margin-left: 15px;
+  font-size: 14px;
+  padding-left: 20px;
+}
+#form .inp{
+  border-color: orange;
+}
+#form .btn_login{
+  color: rgb(36, 8, 8);
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: rgb(247, 150, 108);
+  margin: 10px 130px;
+}
+#form .btn_login:hover{
+  background-color: #fcfcae;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+  // transition-delay: 0.4s;
+}
+#form h4{
+  text-align: center;
+  color: rgb(54, 27, 18);
+  font-size: 24px;
+  font-style: oblique;
+}
+ion-title{
+  color: blue;
+  text-align: center;
+  font-weight: bold;
+  // background-color: red;
+}
+ion-item.Lab6{
+  margin: 0 100px;
+  border: none;
+}
+ion-item.Lab6 > ion-button{
+  background-color: #66f4d3;
+  font-size: 18px;
+  color: brown;
+  padding: 1% 0;
+  font-weight: bolder;
+  border-radius: 6px;
+}

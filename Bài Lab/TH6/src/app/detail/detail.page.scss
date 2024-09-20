@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ion-label.titlefornextlab{
+    color: indianred;
+    text-align: right;
+    transform: translate(-50%, 50%);
+    font-weight: bold;
+}
+ion-title{
+    color: red;
+    text-emphasis: circle;
+    text-align: center;
+}
+p{
+    color: olivedrab;
+    font-weight: 600;
+    text-combine-upright: ceil($number: 12);
+}
+ion-item.ion_button{
+    background-color: aquamarine;
+    border: none;
+    position: relative;
+}
+ion-button{
+    background-color: coral;
+    font-size: 17px;
+    color: black;
+    border-radius: 10px;
+}

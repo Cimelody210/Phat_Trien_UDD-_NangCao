@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      LAB5 -  he thong ATM
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form action="" id="form">
+    <h4>Form đăng nhập</h4>
+    <ion-item class="item">
+      <ion-label for="">Email:</ion-label>
+      <ion-input class="inp inp_email" placeholder="Nhap email tai day"></ion-input><br>
+    </ion-item>
+    <ion-item class="item">
+      <ion-label for="">Password:</ion-label>
+      <ion-input class="inp" type="password" placeholder="Nhap mat khau o day"></ion-input>
+    </ion-item>
+    <ion-button color="aqua" class="btn_login" (click) = "onSumit()">Log-in</ion-button>
+  </form>
+
+  <!-- Lab 6 -->
+  <!-- <ion-item class="Lab6 no-border">
+    <ion-button color="red">Thêm</ion-button>
+    <ion-button color="red">Xóa</ion-button>
+    <ion-button color="red">Sửa</ion-button>
+  </ion-item> -->
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>LAB5 -  he thong ATM</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Phan cua Lab4</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
+
+
+<ion-content>
+  <ion-toolbar>
+    <h5>Danh sach tai khoan</h5>
+    <ion-item>
+      <p *ngFor="let username of username">Chao ban: {{username.tenkh}}, tuoi: {{username.tuoi}} </p>
+    </ion-item>
+    <ion-item>
+      <p>Danh sach tai khoan: </p><br>
+      <p *ngFor="let test_tk of test_tk">Tai khoan co ten: {{test_tk.name}}, So tai khoan: {{test_tk.stk}}, Ma pin: {{test_tk.pin}}</p><br>
+    </ion-item>
+    <ion-item>
+      <p>Cam on ban da ghe tham trang cua chung toi: </p>
+    </ion-item>
+    
+    <ion-label class="titlefornextlab">Cac chuc nang khac cua he thong</ion-label>
+    <ion-item class="ion_button" color="red">
+      <ion-button color="coral">Xem Map</ion-button>
+      <ion-button color="coral">Xem Map</ion-button>
+    </ion-item>
+    <ion-item color="red">
+      <ion-button color="coral">Xem Map</ion-button>
+      <ion-button color="coral">Xem Map</ion-button>
+    </ion-item>
+  </ion-toolbar>
+</ion-content>
+
