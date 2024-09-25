@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+    He thong ATM
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form action="" id="form">
+    <h4>Form đăng nhập</h4>
+    <ion-item class="item">
+      <ion-label for="">Email:</ion-label>
+      <ion-input class="inp inp_email" placeholder="Nhap email tai day"></ion-input><br>
+    </ion-item>
+    <ion-item class="item">
+      <ion-label for="">Password:</ion-label>
+      <ion-input class="inp" type="password" placeholder="Nhap mat khau o day"></ion-input>
+    </ion-item>
+    <ion-button color="#346abc" type="submit" class="btn_login" (click) = "ViewTodetail()">Log-in</ion-button>
+  </form>
+  <!-- <ion-button color="orange" type="submit" class="btn_login" (click) = "ViewTodetail()">Thêm</ion-button> -->
+
+  <!-- Lab 6 -->
+  <ion-item class="Lab6">
+    <ion-button color="orange" type="submit" class="" (click) = "viewtouser()">Thêm</ion-button>
+    <ion-button color="red" (click) = "viewtouser()">Xóa</ion-button>
+    <ion-button color="red" (click) = "viewtouser()">Xem tất cả</ion-button>
+  </ion-item>
+
+  <ion-item class="camera">
+    <ion-label>Thêm Camera</ion-label><br>
+    <ion-button color="red" (click) = "viewtoCamera()">Camera</ion-button>
+  </ion-item>
+
+  <!-- <ion-item class="camera">
+    <ion-label>Thêm Map</ion-label><br>
+    <ion-button color="red" (click) = "viewtoCamera()">Map</ion-button>
+  </ion-item> -->
+</ion-content>

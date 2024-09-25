@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>UserManagement</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">UserManagement</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item class="add">
+    <ion-label position="floating">Tên người dùng</ion-label>
+    <ion-input type="text" placeholder="Nhap ten nguoi dung"></ion-input>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="text" placeholder="Nhap email"></ion-input>
+    <ion-label position="floating">Mat khau</ion-label>
+    <ion-input type="password" placeholder="Nhap password"></ion-input>
+    <ion-button expand="full" color="red" class="btn_Add">Thêm</ion-button>
+  </ion-item>
+  <ion-item class="view">
+    <ion-label position="floating">Tên người dùng</ion-label><br>
+    <ion-button>Xem tất cả tài khoản</ion-button>
+  </ion-item>
+  <ion-item class="delete">
+    <ion-label position="floating">Tên người dùng để xóa</ion-label>
+    <ion-input type="text"></ion-input>
+    <ion-button>Xóa</ion-button>
+  </ion-item>
+ 
+</ion-content>
