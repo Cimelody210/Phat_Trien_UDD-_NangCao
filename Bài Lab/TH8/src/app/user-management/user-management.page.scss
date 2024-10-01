@@ -1,0 +1,35 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+ion-item.add > ion-button.btn_Add{
+    background-color: rgb(250, 95, 95);
+    width: 120px;
+    font-weight: bolder;
+    font-size: 16px;
+    color: black;
+    margin: 10px 160px;
+    border-radius: 8px;
+}
+ion-item.add > ion-input{
+    border: 1px solid rgb(54, 54, 27);
+    border-radius: 8px;
+    padding-left: 10px;
+    
+}
+ion-item.add > ion-label{
+    font-size: 16px;
+    font-display: initial;
+    color: darkviolet;
+    margin-bottom: 7%;
+}
+ion-title{
+    color: chocolate;
+    text-align: center;
+
+}
+
+// ion-item.camera
+.btn_Delete .btn_See{
+    background-color: #87acda;
+}
