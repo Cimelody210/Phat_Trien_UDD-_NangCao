@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <button class="btn_goback" (click)="gotoHome()"><ion-icon name="arrow-back"></ion-icon></button>
+  <ion-toolbar>
+  <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-label>
+    <h4>Chào mừng bạn đã đến với ZakiBook.com</h4>
+    <img src="../../assets/AnhMinhHoa/Logo_App.png" alt="">
+  </ion-label>
+
+  <ion-item>
+    <form action="">
+      <ion-item>
+        <ion-label position="floating">Email</ion-label><br>
+        <ion-input type="email" placeholder="Nhap email tai day" name="email" [clearInput]="true">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Mat khau</ion-label><br>
+        <ion-input type="password" placeholder="Vui long nhap mat khau" name="password"></ion-input>
+        <br>
+      </ion-item>
+      <ion-label>
+        <ion-checkbox [(ngModel)]="checkbox"></ion-checkbox>
+        <ion-text>Nho mat khau</ion-text>
+      </ion-label>
+      <button class="btn_login">Đăng nhập</button>
+    </form>
+  </ion-item>
+  <ion-toolbar>
+    <p>Hoặc chọn phương thức đăng nhập khác</p>
+    <div>
+      <img src="../../assets/AnhMinhHoa/Logo-google-icon.png" alt="Các hình thức đăng nhập khác">
+      <img src="../../assets/AnhMinhHoa/facebook-icon.png" alt="Các hình thức đăng nhập khác">
+      <img src="../../assets/AnhMinhHoa/x.jpg" alt="Các hình thức đăng nhập khác">
+    </div>
+    <i>Nếu chưa có tài khoản, thì đăng ký ở đây:</i>
+    <button (click)="gotoSignUp()">Dang ky</button>
+  </ion-toolbar>
+</ion-content>

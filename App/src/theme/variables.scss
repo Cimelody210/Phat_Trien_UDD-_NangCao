@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --boder-width-ion_item: 0;
+    --ion-color-success-shade: #28bb50;
+    --ion-color-success-tint: #42d96b;
+    --ion-color-warning: #ffc409;
+    --ion-color-primary-shade: #004acd;
+    --ion-color-primary-tint: #1a65eb;
+    --yellow-for-star-lightdark1: #e3e362;
+}
+
+@mixin font-beVNPro(){
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+@mixin font-poppin{
+    font-family: "Poppins", sans-serif;
+}
+@mixin Label_and_Input($color_label){
+    ion-label{
+        color: $color_label;
+        @include font-poppin();
+        font-style: oblique;
+        font-size: 17px;
+        border-bottom: none;
+    }
+    ion-input{
+        margin-top: 4px;
+        @include ImageSize(320px, 20px);
+        border: 1px solid #d5d1d1;
+        border-radius: 10px;
+    }
+}
+@mixin btn_Custom($bgcolor, $fontchu, $text-color, $form-text, $borderradius){
+    background-color: $bgcolor;
+    font-size: $fontchu;
+    padding: 6px;
+    color: $text-color;
+    text-transform: $form-text;
+    border-radius: $borderradius;
+}
+@mixin GRID-FOR-TEMPLATE($cot, $width_cot){
+    display: grid;
+    grid-template-columns: repeat($cot, $width_cot);
+}
+@mixin flex-space_between(){
+    display: flex;
+    justify-content: space-between;
+}
+@mixin btn_goBack($color){
+    background-color: inherit;
+    ion-icon{
+        color: $color;
+        width: 26px;
+        height: 26px;
+        :hover{
+            color: aqua;
+        }
+    }
+}
+@mixin ImageSize($chieudai, $chieurong){
+    width: $chieudai;
+    height: $chieurong;
+}
+// Icon người dùng (set hình tròn)
+@mixin UserAvatarImage($dai, $rong){
+    width: $dai;
+    height: $rong;
+    border-radius: 50%;
+}
+@mixin Contained_navigator_face(){
+    div{
+        @include navigator-face();
+    }
+}
+@mixin navigator-face(){
+    @include flex-space_between();
+    margin-left: 5px;
+    margin-right: 10px;
+    h4{
+        font-size: 16.5px;
+        font-weight: 200;
+    }
+    p{
+      color: blue;
+    }
+}

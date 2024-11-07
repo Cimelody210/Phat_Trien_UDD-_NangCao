@@ -1,0 +1,109 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Trang chủ
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+
+  <ion-item class="logo">
+    <img src="../../assets/AnhMinhHoa/Logo_App.png" alt="">
+    <p>ZakiBook.com</p>
+    <button class="btn_userdetail">
+      <img src="../../assets/AnhMinhHoa/non_user.jpg" alt="" (click)="gotoSignUp()">
+    </button>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder="Tim kiem"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-item class="vertical_form">
+      <img src="../../assets/AnhMinhHoa/BookImage/nha-gia-kim-(ngang).jpg" alt="Images" (click)="gotoItem1()">
+    </ion-item>
+  </ion-item>
+  
+  <ion-toolbar>
+    <div>
+      <h4>Top sản phẩm bán chạy</h4>
+      <p>Xem tất cả</p>
+    </div>
+    <div class="slideimage">
+      <div class="content"> 
+        <a href="">
+          <img src="../../assets/AnhMinhHoa/BookImage/vap-nga-de-truong-thanh.jpg" alt="">
+        </a>
+        <a href="#">
+          <img src="https://static.oreka.vn/800-800_a975184d-c7eb-4dbe-8362-ac81deecd076" alt="">
+        </a>
+        <a href="#">
+          <img src="../../assets/AnhMinhHoa/BookImage/toidihoc.jpg" alt="">
+        </a>
+        <a href="#">
+          <img src="https://intamphuc.vn/wp-content/uploads/2023/06/mau-bia-sach-dep-2.jpg" alt=""> 
+        </a>
+      </div>
+    </div>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <div>
+      <h4>Các đầu sách phổ biến</h4>
+      <p>Xem tat ca</p>
+    </div>
+  </ion-toolbar>
+  <ion-item>
+    <div class="listsp">
+      <div class="image">
+        <img src="../../assets/AnhMinhHoa/BookImage/tatden.jpg" alt="">
+        <h6>Tắt đèn</h6>
+        <div class="cluster_btn">
+          <button class="btn_starrate"><ion-icon name="star"></ion-icon>4.4</button>
+          <button class="btn_purchase"><ion-icon name="cart"></ion-icon></button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="https://pos.nvncdn.com/fd5775-40602/ps/20220530_tBAMfoHD0hPM0i6XDopo3kDT.jpg" alt="">
+        <h6>Adolf Hitler - Chân Dung Một Trùm Phát Xít</h6>
+        <div class="cluster_btn">
+          <button class="btn_starrate"><ion-icon name="star"></ion-icon>4.4</button>
+          <button class="btn_purchase"><ion-icon name="cart"></ion-icon></button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="../../assets/AnhMinhHoa/BookImage/khonggiadinh.jpg" alt="">
+        <h6>Không gia đình</h6>
+        <div class="cluster_btn">
+          <button class="btn_starrate"><ion-icon name="star"></ion-icon>4.4</button>
+          <button class="btn_purchase"><ion-icon name="cart"></ion-icon></button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="../../assets/AnhMinhHoa/BookImage/toidihoc.jpg" alt="">
+        <h6>Tôi đi học</h6>
+        <div class="cluster_btn">
+          <button class="btn_starrate"><ion-icon name="star"></ion-icon>4.4</button>
+          <button class="btn_purchase"><ion-icon name="cart"></ion-icon></button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="../../assets/AnhMinhHoa/BookImage/thuc-thi.jpg" alt="">
+        <h6>Thực thi</h6>
+        <div class="cluster_btn">
+          <button class="btn_starrate"><ion-icon name="star"></ion-icon>4.4</button>
+          <button class="btn_purchase"><ion-icon name="cart"></ion-icon></button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="../../assets/AnhMinhHoa/BookImage/haycukhatkhao-sachkhaitam.jpg" alt="">
+        <h6>Hãy cứ khát khao</h6>
+        <div class="cluster_btn">
+          <button class="btn_starrate"><ion-icon name="star"></ion-icon>4.4</button>
+          <button class="btn_purchase"><ion-icon name="cart"></ion-icon></button>
+        </div>
+      </div>
+    </div>
+  </ion-item>
+
+</ion-content>

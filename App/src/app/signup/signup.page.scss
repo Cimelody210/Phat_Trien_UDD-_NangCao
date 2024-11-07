@@ -1,0 +1,39 @@
+@import '../../theme/variables.scss';
+
+ion-content{
+    ion-toolbar{
+        h5{
+            text-align: center;
+            font-weight: 900;
+            @include font-beVNPro();
+            text-transform: uppercase;
+        }
+        img{
+            @include UserAvatarImage(50px, 50px);
+            transform: translate(160px, 10%);
+        }
+    }
+    ion-item{
+        form{
+            ion-item{
+                @include Label_and_Input(#fb1f56);
+            }
+            button{
+                @include btn_Custom(#69d1fa, 16px, white, bold, 11px);
+                width: 320px;
+                padding: 8px;
+                margin: 15px 10px 0 10px;
+                text-transform: uppercase;
+                transform: translate(2%, 0);
+            }
+        }
+    }
+    div{
+        label{
+            font-size: 14px;
+        }
+        button{
+            @include btn_Custom(inherit, 14px, black, rgb(123, 203, 249), 8px);
+        }
+    }
+}

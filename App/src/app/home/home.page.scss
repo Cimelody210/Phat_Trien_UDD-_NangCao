@@ -1,0 +1,116 @@
+@import "../../theme/variables.scss";
+
+ion-item.logo{
+  @include flex-space_between();
+  flex-direction: row;
+  margin: 0 var(--size_margin_logo);
+  button{
+    background-color: inherit;
+    img{
+      margin-left: 140px;
+      @include UserAvatarImage(30px,30px);
+    }
+  }
+  img{
+    border-radius: 9px;
+    margin-right: 5px;
+    @include ImageSize(25px, 25px);
+  }
+  p{
+    font-size: 18px;
+    font-weight: bolder;
+  }
+}
+
+ion-item{
+  ion-input{
+    width: 93%;
+    border-radius: 10px;
+    border: 0.87px ridge #c1bcbc;
+  }
+}
+
+ion-item{
+  ion-item.vertical_form{
+    img{
+      @include ImageSize(250px, 200px);
+      border-radius: 20px;
+      padding: 5px 1px;
+    }
+  }
+}
+
+ion-toolbar {
+  margin: 0 5px;
+  @include Contained_navigator_face();
+  //Top sản phẩm bán chạy
+  .slideimage{
+    overflow-x: auto;
+    white-space: nowrap;
+    .content{
+      display: inline-block;
+      a{
+        width: 150px;
+        padding-right: 7px;
+        text-decoration: none;
+        img{
+          display: inline-block;
+          line-height: 100px;
+          padding: 0;
+          width: 150px;
+          height: 200px;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+}
+ion-toolbar{
+  @include Contained_navigator_face();
+  margin: 0 6px;
+}
+ion-item{
+  width: 360px;
+  margin: 7px 15px;
+  .listsp{
+    @include GRID-FOR-TEMPLATE(2, 150px);
+    column-gap: 10px;
+    row-gap: 5px;
+
+    //list side 2 column of product
+    .image{
+      img{
+        @include ImageSize(150px, 230px);
+        margin-bottom: -10px;
+        border-radius: 9px;
+      }
+      h6{
+        font-weight: bold;
+        font-size: 14px;
+        width: inherit;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }      
+      .cluster_btn{
+        @include flex-space_between();
+        button.btn_starrate{
+          @include btn_Custom(#faf571, 16px, #331717, uppercase, 5px);
+          ion-icon{
+            height: 18px;
+            padding: -10px 0;
+            color: rgb(138, 138, 45);
+            font-size: 10px;
+          }
+        }
+        button.btn_purchase{
+          @include btn_Custom(blue, 16px, white, none, 5px);
+          :hover{
+            transform: translateX(-75%);
+            transition: 0.98s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+        }
+      }
+    }
+  }
+}

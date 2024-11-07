@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "../../theme/variables.scss";
+
+ion-header{
+    // @include font-poppin();
+    @include flex-space_between();
+    button.btn_goback{
+        @include btn_goBack(black);
+    }
+}
+
+ion-content{
+    ion-label{
+        h4{
+            @include font-beVNPro();
+            margin-top: 10px;
+            font-size: 20px;
+            text-align: center;
+            font-weight: 500;
+        }
+        img{
+            @include ImageSize(80px, 80px);
+            border-radius: 10px;
+            top: 250px;
+            transform: translate(200%, 20%);
+        }
+    }
+    ion-item {
+        form{
+            ion-item{
+                @include Label_and_Input(red);
+            }
+            ion-label{
+                display: flex;
+                align-items: normal;
+                ion-text{
+                    margin-left: -120px;
+                }
+                ion-checkbox{
+                    margin-right: 8px;
+                }
+            }
+            button{
+                @include btn_Custom(#f2a145, 17px, #4d2727, none, 9px);
+                @include font-poppin();
+                margin-top: 10px;
+                transform: translate(95%, -10%);
+                padding: 10px 15px;
+                font-weight: 400;
+                :hover{
+                    background-color: rgb(94, 176, 244);
+                }
+            }
+        }
+    }
+    ion-toolbar{
+        p{
+            text-align: center;
+            font-size: 14px;
+            font-style: italic;
+            @include font-beVNPro();
+        }
+        div{
+            @include GRID-FOR-TEMPLATE(3, 89px);
+            width: 250px;
+            transform: translate(30%, -10%);
+            img{
+                @include UserAvatarImage(40px, 40px);
+            }
+        }
+        i{
+            font-size: 15px;
+            text-align: left;
+        }
+        button{
+            font-style: italic;
+            @include font-poppin();
+            @include btn_Custom(inherit, 15px, black, none, 10px);
+        }
+    }
+}

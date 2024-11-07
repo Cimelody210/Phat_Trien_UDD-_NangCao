@@ -1,0 +1,38 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <ion-toolbar>
+    <h5>đăng ký</h5>
+    <img src="../../assets/AnhMinhHoa/Logo_App.png" alt="Logo cua App">
+  </ion-toolbar>
+  <ion-item>
+    <form action="">
+      <ion-item>
+        <ion-label position="floating">Họ tên</ion-label><br>
+        <ion-input type="name" placeholder="Vui lòng nhập tên" name="name" [clearInput]="true">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label><br>
+        <ion-input type="email" placeholder="Nhập email" [clearInput]="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Mật khẩu</ion-label><br>
+        <ion-input type="password" placeholder=" Nhập mật khẩu (tối đa 8 ký tự)" [clearInput]="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Mật khẩu</ion-label><br>
+        <ion-input type="password" placeholder=" Xác nhận mật khẩu" name=""></ion-input>
+      </ion-item>
+      <button class="btn_DangKy">Đăng ký</button>
+    </form>
+  </ion-item>
+  <div>
+    <label>Bạn đã có tài khoản? Đăng nhập tại đây</label>
+    <button (click)="gotoLogin()">Log-in</button>
+  </div>
+</ion-content>
